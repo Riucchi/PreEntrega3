@@ -1,0 +1,186 @@
+{% extends 'pre_entrega/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>{% block Title %} Profesores {% endblock %}</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'pre_entrega/css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'pre_entrega/css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'pre_entrega/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'pre_entrega/css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="{% static 'pre_entrega/css/owl.carousel.min.css' %}">
+      <link rel="stylesoeet" href="{% static 'pre_entrega/css/owl.theme.default.min.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      {% block navbar-footer %}
+      <!-- project section start -->
+      <div class="project_section layout_padding padding_top_90">
+         <div class="container">
+            <h1 class="project_taital">Latest Projects</h1>
+            <div class="project_menu">
+               <ul>
+                  <li class="active"><a href="#">All</a></li>
+                  <li><a href="#">Building</a></li>
+                  <li><a href="#">Commercial</a></li>
+                  <li><a href="#">Interior Design</a></li>
+                  <li><a href="#">Residential</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="project_section_2 layout_padding">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-sm-3">
+                     <div><img src="{% static 'pre_entrega/images/img-3.png' %}" class="image_3"></div>
+                  </div>
+                  <div class="col-sm-3">
+                     <div><img src="{% static 'pre_entrega/images/img-4.png' %}" class="image_3"></div>
+                  </div>
+                  <div class="col-sm-3">
+                     <div><img src="{% static 'pre_entrega/images/img-5.png' %}" class="image_3"></div>
+                  </div>
+                  <div class="col-sm-3">
+                     <div><img src="{% static 'pre_entrega/images/img-6.png' %}" class="image_3"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- project section end -->
+      <!-- project section start -->
+      <div class="project_section_3 layout_padding padding_bottom_90">
+         <div class="container">
+            <h1 class="project_taital">Our Features Projects</h1>
+            <p class="philosophy_text">It is a long established fact that a reader will be distracted by the readable</p>
+         </div>
+         <div class="project_section_2 layout_padding">
+            <div id="my_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-sm-4">
+                              <div>
+                                 <img src="{% static 'pre_entrega/images/img-4.png' %}" class="image_6">
+                                 <h4 class="reader_text">Reader will be <br>distracted by the readable</h4>
+                              </div>
+                           </div>
+                           <div class="col-sm-4">
+                              <div>
+                                 <img src="{% static 'pre_entrega/images/img-5.png' %}" class="image_6">
+                                 <h4 class="reader_text">Reader will be <br>distracted by the readable</h4>
+                              </div>
+                           </div>
+                           <div class="col-sm-4">
+                              <div>
+                                 <img src="{% static 'pre_entrega/images/img-6.png' %}" class="image_6">
+                                 <h4 class="reader_text">Reader will be <br>distracted by the readable</h4>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-sm-4">
+                              <div>
+                                 <img src="{% static 'pre_entrega/images/img-4.png' %}" class="image_6">
+                                 <h4 class="reader_text">Reader will be <br>distracted by the readable</h4>
+                              </div>
+                           </div>
+                           <div class="col-sm-4">
+                              <div>
+                                 <img src="{% static 'pre_entrega/images/img-5.png' %}" class="image_6">
+                                 <h4 class="reader_text">Reader will be <br>distracted by the readable</h4>
+                              </div>
+                           </div>
+                           <div class="col-sm-4">
+                              <div>
+                                 <img src="{% static 'pre_entrega/images/img-6.png' %}" class="image_6">
+                                 <h4 class="reader_text">Reader will be <br>distracted by the readable</h4>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-sm-4">
+                              <div>
+                                 <img src="{% static 'pre_entrega/images/img-4.png' %}" class="image_6">
+                                 <h4 class="reader_text">Reader will be <br>distracted by the readable</h4>
+                              </div>
+                           </div>
+                           <div class="col-sm-4">
+                              <div>
+                                 <img src="{% static 'pre_entrega/images/img-5.png' %}" class="image_6">
+                                 <h4 class="reader_text">Reader will be <br>distracted by the readable</h4>
+                              </div>
+                           </div>
+                           <div class="col-sm-4">
+                              <div>
+                                 <img src="{% static 'pre_entrega/images/img-6.png' %}" class="image_6">
+                                 <h4 class="reader_text">Reader will be <br>distracted by the readable</h4>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <form method="post">
+         {% csrf_token %}
+         <table>
+         {{ form.as_table }}
+         </table>
+         <button type="submit">Guardar</button>
+         </form>
+      
+      {% endblock %}
+      <!-- copyright section end -->    
+      <!-- Javascript files-->
+      <script src="{% static 'pre_entrega/js/jquery.min.js' %}"></script>
+      <script src="{% static 'pre_entrega/js/popper.min.js' %}"></script>
+      <script src="{% static 'pre_entrega/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'pre_entrega/js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'pre_entrega/js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'pre_entrega/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'pre_entrega/js/custom.js' %}"></script>
+      <!-- javascript --> 
+      <script src="{% static 'pre_entrega/js/owl.carousel.js' %}"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>

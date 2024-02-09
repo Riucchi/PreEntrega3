@@ -1,0 +1,107 @@
+{% extends 'pre_entrega/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>{% block Title %} Estudiantes {% endblock %}</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'pre_entrega/css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'pre_entrega/css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'pre_entrega/css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'pre_entrega/css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="{% static 'pre_entrega/css/owl.carousel.min.css' %}">
+      <link rel="stylesoeet" href="{% static 'pre_entrega/css/owl.theme.default.min.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      {% block navbar-footer %}
+      <!-- service section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <div class="services_taital">Hola estudiantes!!</div>
+            <p class="services_text">Aqui se pueden registrar en la database!</p>
+         </div>
+         <div class="services_section_2 layout_padding">
+            <div class="container-fluid padding_0">
+               <div class="box_main">
+                  <div class="box_left">
+                     <div class="box_left_main">
+                        <div class="box_left_one">
+                           <div class="image_1"><img src="{% static 'pre_entrega/images/img-1.png' %}"></div>
+                        </div>
+                        <div class="box_right_one">
+                           <div class="icon_1"><img src="{% static 'pre_entrega/images/icon-1.png' %}"><span class="padding_left_10">architecture  Design</span></div>
+                           <p class="long_text">It is a long established fact that a reader will be distracted by the </p>
+                        </div>
+                     </div>
+                     <div class="see_bt"><a href="#">See More</a></div>
+                  </div>
+                  <div class="box_middle">
+                     <div class="box_left_main">
+                        <div class="padding_10">
+                           <div class="icon_1"><img src="{% static 'pre_entrega/images/icon-2.png' %}"><span class="padding_left_10">architecture  Design</span></div>
+                           <p class="long_text">It is a long established fact that a reader will be distracted by the </p>
+                        </div>
+                     </div>
+                     <div class="see_bt"><a href="#">See More</a></div>
+                  </div>
+                  <div class="box_right">
+                     <div class="box_left_main">
+                        <div class="box_right_one">
+                           <div class="icon_1"><img src="{% static 'pre_entrega/images/icon-3.png' %}"><span class="padding_left_10">architecture  Design</span></div>
+                           <p class="long_text">It is a long established fact that a reader will be distracted by the </p>
+                        </div>
+                        <div class="box_left_one">
+                           <div class="image_2"><img src="{% static 'pre_entrega/images/img-2.png' %}"></div>
+                        </div>
+                     </div>
+                     <div class="see_bt"><a href="#">See More</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <form method="post">
+         {% csrf_token %}
+         <table>
+         {{ form.as_table }}
+         </table>
+         <button type="submit">Guardar</button>
+         </form>
+         
+      {% endblock %}
+      <!-- Javascript files-->
+      <script src="{% static 'pre_entrega/js/jquery.min.js' %}"></script>
+      <script src="{% static 'pre_entrega/js/popper.min.js' %}"></script>
+      <script src="{% static 'pre_entrega/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'pre_entrega/js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'pre_entrega/js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'pre_entrega/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'pre_entrega/js/custom.js' %}"></script>
+      <!-- javascript --> 
+      <script src="{% static 'pre_entrega/js/owl.carousel.js' %}"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
