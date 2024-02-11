@@ -41,28 +41,28 @@
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
-                     <h1 class="banner_taital">We<br>Make Your<br>Dream Home</h1>
+                     <h1 class="banner_taital">Nosotros<br>Hacemos tu<br>Casa de Ensueño</h1>
                      <div class="btn_main">
-                        <div class="more_bt"><a href="#">Contact us</a></div>
-                        <div class="contact_bt active"><a href="#">get a quote Now</a></div>
+                        <div class="more_bt"><a href="{% url 'entregables' %}">Contactanos</a></div>
+                        <div class="contact_bt active"><a href="#">Encuentranos en</a></div>
                      </div>
                   </div>
                </div>
                <div class="carousel-item">
                   <div class="container">
-                     <h1 class="banner_taital">We<br>Make Your<br>Dream Home</h1>
+                     <h1 class="banner_taital">Nosotros<br>Hacemos tu<br>Casa de Ensueño</h1>
                      <div class="btn_main">
-                        <div class="more_bt"><a href="#">Contact us</a></div>
-                        <div class="contact_bt active"><a href="#">get a quote Now</a></div>
+                        <div class="more_bt"><a href="{% url 'entregables' %}">Contactanos</a></div>
+                        <div class="contact_bt active"><a href="#">Encuentranos en</a></div>
                      </div>
                   </div>
                </div>
                <div class="carousel-item">
                   <div class="container">
-                     <h1 class="banner_taital">We<br>Make Your<br>Dream Home</h1>
+                     <h1 class="banner_taital">Nosotros<br>Hacemos tu<br>Casa de Ensueño</h1>
                      <div class="btn_main">
-                        <div class="more_bt"><a href="#">Contact us</a></div>
-                        <div class="contact_bt active"><a href="#">get a quote Now</a></div>
+                        <div class="more_bt"><a href="{% url 'entregables' %}">Contactanos</a></div>
+                        <div class="contact_bt active"><a href="#">Encuentranos en</a></div>
                      </div>
                   </div>
                </div>
@@ -82,8 +82,8 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="about_main">
-                     <div class="about_taital">About company</div>
-                     <p class="about_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+                     <div class="about_taital">Sobre la Compania</div>
+                     <p class="about_text">Nos dedicamos a la venta de instrumentos para la producción Agricola</p>
                      <div class="about_bt"><a href="#">About More</a></div>
                   </div>
                </div>
@@ -95,7 +95,7 @@
       </div>
       <form action="" method="POST">
          {% csrf_token %}
-         <h1> Buscador de Camadas </h1>
+         <p class="h1">Buscador de Camadas</p>
          <table>
             {{formulario.as_table}}
          </table>
