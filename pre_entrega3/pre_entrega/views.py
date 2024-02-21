@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from pre_entrega.models import Cursos
 from pre_entrega.forms import FormCursos, FormEntregables, FormEstudiantes, FormProfesores, Buscar
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
-
+@login_required
 def curso_form(request):
     formulario = FormCursos(request.POST)
     if formulario.is_valid():
@@ -16,7 +16,8 @@ def curso_form(request):
     else:
         form = FormCursos()
         return render(request, 'pre_entrega/Cursos.html', {'form':form})
-
+    
+@login_required
 def profesores_form(request):
     formulario = FormProfesores(request.POST or None)
     if formulario.is_valid():
@@ -28,7 +29,8 @@ def profesores_form(request):
     else:
         form = FormProfesores()
         return render(request, 'pre_entrega/Profesores.html', {'form':form})
-
+    
+@login_required
 def entregables_form(request):
     formulario = FormEntregables(request.POST or None)
     if formulario.is_valid():
@@ -40,7 +42,8 @@ def entregables_form(request):
     else:
         form = FormEntregables()
         return render(request, 'pre_entrega/Entregables.html', {'form':form})
-
+    
+@login_required
 def estudiantes_form(request):
     formulario = FormEstudiantes(request.POST or None)
     if formulario.is_valid():

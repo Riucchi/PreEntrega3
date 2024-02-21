@@ -36,29 +36,52 @@
       <div class="header_section">
          <div class="">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="logo" href="{% url 'index' %}"><img src="{% static 'pre_entrega/images/logo.png' %}"></a>
+               <a class="logo" href="{% url 'pre_entrega:index' %}">
+                  <img src="{% static 'pre_entrega/images/logo.png' %}">
+              </a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+                        <a class="nav-link" href="{% url 'pre_entrega:index' %}">Inicio</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'cursos' %}">Cursos</a>
+                        <a class="nav-link" href="{% url 'pre_entrega:cursos' %}">Cursos</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profesores' %}">Profesores</a>
+                        <a class="nav-link" href="{% url 'pre_entrega:profesores' %}">Profesores</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'estudiantes' %}">Estudiantes</a>
+                        <a class="nav-link" href="{% url 'pre_entrega:estudiantes' %}">Estudiantes</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'entregables' %}">Entregables</a>
+                        <a class="nav-link" href="{% url 'pre_entrega:entregables' %}">Entregables</a>
                      </li>
                   </ul>
-                  <div class="search_icon"><a href="#"><img src="{% static 'pre_entrega/images/search-icon.png' %}"></a></div>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   {% if request.user.is_authenticated %}
+                   <div class="nav-item dropdown">
+                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     {{ request.user.username }}
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                       <a class="dropdown-item" href="{% url 'users:logout' %}" id="logoutLink">Cerrar Sesion</a>
+                       </div>
+
+                       {% else %}
+                     <div class="nav-item dropdown">
+                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Login/Singup
+                       </button>
+                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                         <a class="dropdown-item" href="{% url 'users:login' %}" id="loginLink">Iniciar sesión</a>
+                         <a class="dropdown-item" href="{% url 'users:register' %}" id="registerLink">Crear cuenta</a>
+                        {% endif %}
+                       </div>
+                     </div>
+                   </div>
                </div>
             </nav>
          </div>

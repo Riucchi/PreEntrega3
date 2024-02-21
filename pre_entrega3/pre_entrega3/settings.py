@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pre_entrega',
+    'users',
     
 ]
 
@@ -119,9 +120,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'pre_entrega' / 'static',
-]
+
 
 
 # Default primary key field type

@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
-
+from users.views import CreacionDeCuenta
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('pre_entrega/', include('pre_entrega.urls')),
+    path('pre_entrega/', include('pre_entrega.urls')),
+    path('users/', include('users.urls', namespace='users')),
 ]
