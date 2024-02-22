@@ -69,11 +69,11 @@ def buscar(request):
         formulario = Buscar()
         return render(request, "pre_entrega/index.html", {"formulario": formulario})
     
-
+    
 def ver_propiedad(request, property_id):
-    property_instance = Property.objects.get(pk=property_id)
-    images = property_instance.images.all()
-    return render(request, 'pre_entrega/propiedad.html', {'property': property_instance, 'images': images})
+    property_instance = Image.objects.get(pk=property_id)
+    print(property_instance)
+    return render(request, 'pre_entrega/propiedad.html', {'property': property_instance})
 
 
 

@@ -1,18 +1,9 @@
 {% extends 'pre_entrega/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% block navbar-footer %} 
     <h1>{{ property.m2 }} m2</h1>
     <h2>{{ property.rooms }} habitaciones</h2>
     <h2>{{ property.bathrooms }} baños</h2>
-    {% for image in images %}
-        <img src="{{ image.image.url }}" alt="Imagen de la propiedad">
-    {% endfor %}
-</body>
-</html>
+        <img src="{{ property.image.url }}" alt="Imagen de la propiedad">
+
+    {% endblock %}
