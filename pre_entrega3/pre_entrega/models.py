@@ -20,4 +20,11 @@ class Entregables(models.Model):
     fecha_de_entrega = models.DateField()
     entregado = models.BooleanField()
 
+class Property(models.Model):
+    m2 = models.IntegerField()
+    rooms = models.IntegerField()
+    bathrooms = models.IntegerField()
 
+class Image(models.Model):
+    property = models.ForeignKey(Property, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='property_images/')

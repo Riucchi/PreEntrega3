@@ -1,6 +1,6 @@
-from django.shortcuts import render
-from pre_entrega.models import Cursos
-from pre_entrega.forms import FormCursos, FormEntregables, FormEstudiantes, FormProfesores, Buscar
+from django.shortcuts import render, redirect
+from pre_entrega.models import Cursos, Property, Image
+from pre_entrega.forms import FormCursos, FormEntregables, FormEstudiantes, FormProfesores, Buscar, PropertyForm, ImageForm
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -68,3 +68,26 @@ def buscar(request):
     else:
         formulario = Buscar()
         return render(request, "pre_entrega/index.html", {"formulario": formulario})
+    
+
+def ver_propiedad(request, property_id):
+    property_instance = Property.objects.get(pk=property_id)
+    images = property_instance.images.all()
+    return render(request, 'pre_entrega/propiedad.html', {'property': property_instance, 'images': images})
+
+
+
+
+def subir_propiedad(request):
+    if request.method == 'POST':
+        property_form = PropertyForm(request.POST)
+        image_form = ImageForm(request.POST, request.FILES)
+        if property_form.is_valid() and image_form.is_valid():
+            property_instance = property_form.save()
+            for image in request.FILES.getlist('image'):
+                Image.objects.create(property=property_instance, image=image)
+                return redirect('propiedad.html', property_id=property_instance.id)
+    else:
+        property_form = PropertyForm()
+        image_form = ImageForm()
+    return render(request, 'pre_entrega/subirpropiedad.html', {'property_form': property_form, 'image_form': image_form})
