@@ -1,9 +1,14 @@
 {% extends 'pre_entrega/base.html' %}
 {% load static %}
 {% block navbar-footer %} 
-    <h1>{{ property.m2 }} m2</h1>
-    <h2>{{ property.rooms }} habitaciones</h2>
-    <h2>{{ property.bathrooms }} baños</h2>
+    <br>
+    <br>
+    <br>
         <img src="{{ property.image.url }}" alt="Imagen de la propiedad">
+        <br>
+        <br>
+        <h1>{{ property2.m2 }} m2</h1>
+        <h2>{{ property2.rooms }} habitaciones</h2>
+        <h2>{{ property2.bathrooms }} baños</h2>
 
     {% endblock %}

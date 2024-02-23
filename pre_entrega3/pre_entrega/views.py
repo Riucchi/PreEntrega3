@@ -70,10 +70,12 @@ def buscar(request):
         return render(request, "pre_entrega/index.html", {"formulario": formulario})
     
     
+    
 def ver_propiedad(request, property_id):
     property_instance = Image.objects.get(pk=property_id)
-    print(property_instance)
-    return render(request, 'pre_entrega/propiedad.html', {'property': property_instance})
+    property_instance_dos = Property.objects.get(pk=property_id)
+    return render(request, 'pre_entrega/propiedad.html', {'property': property_instance, 'property2':property_instance_dos})
+
 
 
 
@@ -86,7 +88,7 @@ def subir_propiedad(request):
             property_instance = property_form.save()
             for image in request.FILES.getlist('image'):
                 Image.objects.create(property=property_instance, image=image)
-                return redirect('propiedad.html', property_id=property_instance.id)
+                return redirect('pre_entrega/propiedad.html', property_id=property_instance.id)
     else:
         property_form = PropertyForm()
         image_form = ImageForm()
